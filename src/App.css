@@ -1,0 +1,19 @@
+.navbar-custom {
+  background: linear-gradient(90deg, #5B5BD6, #6C63FF);
+}
+.sidebar .nav-link {
+  padding: 5px 10px !important;
+  font-size: 14px !important;
+}
+
+.sidebar .nav-title {
+  font-size: 12px !important;
+  margin-top: 7px !important;
+}
+.sidebar .child{
+  margin-left: 15px;
+}
+.description-role {
+  max-width: 250px;
+  overflow-wrap: break-word;
+}
