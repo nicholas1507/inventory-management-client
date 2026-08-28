@@ -1,18 +1,63 @@
-# React + Vite
+# Web Warehouse Inventory - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Repositori ini berisi kode sumber untuk antarmuka pengguna (Frontend) dari sistem manajemen gudang (Warehouse Inventory). Aplikasi ini dirancang sebagai dasbor interaktif berbasis komponen yang terhubung langsung dengan API Backend untuk mengelola data stok, produk, dan permintaan barang secara visual dan responsif.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tautan Proyek
+* **Aplikasi Web (Live Demo):** https://invenio-stock.netlify.app/login
+* **Repositori API (Backend):** https://inventory-management-api-xsv4.onrender.com
 
-## React Compiler
+---
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Fitur Utama (UI/UX)
+* **Dashboard & Charts Interaktif:** Menampilkan visualisasi data analitik pergerakan stok barang menggunakan komponen grafik Chart.js.
+* **Manajemen Kontrol Akses (RBAC UI):** Antarmuka dinamis yang otomatis menyembunyikan atau menampilkan menu berdasarkan verifikasi token JWT hasil dekripsi `jwt-decode`.
+* **Cetak Laporan PDF:** Dilengkapi dengan fitur ekspor data laporan mutasi gudang langsung ke dalam dokumen PDF unduhan secara instan.
+* **Notifikasi Responsif:** Manajemen pesan galat, konfirmasi transaksi, dan status sukses menggunakan pop-up interaktif dari SweetAlert2.
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## Teknologi Utama
+* **Framework:** React 19 & React Router DOM 7
+* **Build Tool:** Vite 7
+* **UI Template & Components:** CoreUI React 5 & CoreUI Icons
+* **Styling:** Bootstrap 5
+* **HTTP Client:** Axios
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Cara Menjalankan Proyek
+
+Ikuti langkah-langkah di bawah ini untuk menjalankan aplikasi frontend di lingkungan lokal Anda:
+
+### 1. Clone Repositori
+```bash
+git clone https://github.com/nicholas1507/inventory-management-client
+cd inventory-management-client
+```
+
+### 2. Instal Dependensi
+```bash
+npm install
+```
+
+### 3. Konfigurasi Environment (.env)
+1. Buat file baru bernama `.env` di root folder proyek frontend Anda.
+2. Tambahkan URL endpoint backend Anda agar Axios dapat terhubung ke server API. Contoh pengisian:
+   ```env
+   VITE_API_URL=http://localhost:3000
+   ```
+
+### 4. Jalankan Aplikasi
+* **Mode Pengembangan (Development):**
+  ```bash
+  npm run dev
+  ```
+* **Mode Produksi (Build & Preview):**
+  ```bash
+  npm run build
+  npm run preview
+  ```
+
+Buka tautan lokal yang tertera pada terminal Anda (biasanya `http://localhost:5173`) di browser.
