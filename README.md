@@ -8,6 +8,11 @@ Repositori ini berisi kode sumber untuk antarmuka pengguna (Frontend) dari siste
 * **Aplikasi Web (Live Demo):** https://invenio-stock.netlify.app/login
 * **Repositori API (Backend):** https://inventory-management-api-xsv4.onrender.com
 
+### Demo Credentials
+
+**Role:** Admin  
+**Email:** `admin@gmail.com`  
+**Password:** `business17`
 ---
 
 ## Fitur Utama (UI/UX)
